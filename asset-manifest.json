@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/official-web/static/css/main.cca527f8.css",
-    "main.js": "/official-web/static/js/main.53c237ac.js",
-    "static/js/453.935b0e8d.chunk.js": "/official-web/static/js/453.935b0e8d.chunk.js",
-    "static/media/CanvaSweetHeartCN-Regular.woff2": "/official-web/static/media/CanvaSweetHeartCN-Regular.6655730c84e10412ed39.woff2",
-    "static/media/Carat-UB.woff2": "/official-web/static/media/Carat-UB.4d5ab3f7e012d3a44e41.woff2",
-    "static/media/service4.gif": "/official-web/static/media/service4.f8202a925edad28df5ab.gif",
-    "static/media/service2.gif": "/official-web/static/media/service2.5aa4c8d7c49c260671cb.gif",
-    "static/media/service1.gif": "/official-web/static/media/service1.8d951811f82983c49861.gif",
-    "static/media/film.png": "/official-web/static/media/film.ebb1082c2632fee7ee12.png",
-    "static/media/service3.gif": "/official-web/static/media/service3.3d03a87826be5888cb71.gif",
-    "static/media/ink3.png": "/official-web/static/media/ink3.0555ce5d59c8cd803403.png",
-    "static/media/ink2.png": "/official-web/static/media/ink2.3fc131ac35d8454186aa.png",
-    "static/media/ink1.png": "/official-web/static/media/ink1.88f422507ac2ee66ef7a.png",
-    "static/media/tng_logo.svg": "/official-web/static/media/tng_logo.385531713b9e58695c4cbfd69a3a0581.svg",
-    "static/media/kong.svg": "/official-web/static/media/kong.69a39573bf5422a7e1cfc1787be1be45.svg",
-    "static/media/tang.svg": "/official-web/static/media/tang.de1a0a01605dd722e26ca92299c384f2.svg",
-    "static/media/ngo.svg": "/official-web/static/media/ngo.40ff2c04947a7d753ff145cc02e3b4fa.svg",
-    "index.html": "/official-web/index.html",
-    "main.cca527f8.css.map": "/official-web/static/css/main.cca527f8.css.map",
-    "main.53c237ac.js.map": "/official-web/static/js/main.53c237ac.js.map",
-    "453.935b0e8d.chunk.js.map": "/official-web/static/js/453.935b0e8d.chunk.js.map"
+    "main.css": "/static/css/main.f053e56b.css",
+    "main.js": "/static/js/main.e7ff433d.js",
+    "static/js/453.935b0e8d.chunk.js": "/static/js/453.935b0e8d.chunk.js",
+    "static/media/CanvaSweetHeartCN-Regular.woff2": "/static/media/CanvaSweetHeartCN-Regular.6655730c84e10412ed39.woff2",
+    "static/media/Carat-UB.woff2": "/static/media/Carat-UB.4d5ab3f7e012d3a44e41.woff2",
+    "static/media/service4.gif": "/static/media/service4.f8202a925edad28df5ab.gif",
+    "static/media/service2.gif": "/static/media/service2.5aa4c8d7c49c260671cb.gif",
+    "static/media/service1.gif": "/static/media/service1.8d951811f82983c49861.gif",
+    "static/media/film.png": "/static/media/film.ebb1082c2632fee7ee12.png",
+    "static/media/service3.gif": "/static/media/service3.3d03a87826be5888cb71.gif",
+    "static/media/ink3.png": "/static/media/ink3.0555ce5d59c8cd803403.png",
+    "static/media/ink2.png": "/static/media/ink2.3fc131ac35d8454186aa.png",
+    "static/media/ink1.png": "/static/media/ink1.88f422507ac2ee66ef7a.png",
+    "static/media/tng_logo.svg": "/static/media/tng_logo.385531713b9e58695c4cbfd69a3a0581.svg",
+    "static/media/kong.svg": "/static/media/kong.69a39573bf5422a7e1cfc1787be1be45.svg",
+    "static/media/tang.svg": "/static/media/tang.de1a0a01605dd722e26ca92299c384f2.svg",
+    "static/media/ngo.svg": "/static/media/ngo.40ff2c04947a7d753ff145cc02e3b4fa.svg",
+    "index.html": "/index.html",
+    "main.f053e56b.css.map": "/static/css/main.f053e56b.css.map",
+    "main.e7ff433d.js.map": "/static/js/main.e7ff433d.js.map",
+    "453.935b0e8d.chunk.js.map": "/static/js/453.935b0e8d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cca527f8.css",
-    "static/js/main.53c237ac.js"
+    "static/css/main.f053e56b.css",
+    "static/js/main.e7ff433d.js"
   ]
 }
