@@ -95,12 +95,6 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* <div className='text-container'>
-                    <div className='title'>我搵到客</div>
-                    <div className='title'>你都要接得住</div>
-                </div> */}
-                {/* <div className='circle'></div> */}
             </div>
         </div>
     )
