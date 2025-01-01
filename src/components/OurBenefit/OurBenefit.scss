@@ -1,0 +1,160 @@
+.our-benifit-container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .scroller {
+        margin: auto 2rem;
+        img {
+            width: 8rem;
+        }
+    }
+
+    h2 {
+        font-size: 4rem;
+        color: var(--bg-primary-color);
+        background: var(--text-primary-color);
+        padding: 1.5rem;
+        line-height: 1;
+        position: relative;
+        letter-spacing: 0.3rem;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            border-top: 0.5rem dashed var(--text-primary-color);
+            height: 0.5rem;
+            width: 100%;
+            top: -0.5rem;
+            left: 0;
+        }
+
+        &::after {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            border-top: 0.5rem dashed var(--text-primary-color);
+            height: 0.5rem;
+            width: 100%;
+            bottom: -1rem;
+            left: 0;
+        }
+    }
+
+    .benefit-item {
+        display: flex;
+        margin: auto;
+        position: relative;
+        cursor: default;
+        user-select: none;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+        .item-number {
+            position: relative;
+            .number {
+                font-family: "Abril Fatface", serif;
+                color: #4b473b;
+                font-size: 15rem;
+                font-style: italic;
+
+                &.neon {
+                    animation: neroSwitchOn 2.5s linear forwards;
+                }
+            }
+
+            img {
+                position: absolute;
+            }
+
+            .ink {
+                z-index: -1;
+            }
+
+            #ink1 {
+                width: 20rem;
+                left: -130%;
+                top: 20%;
+            }
+
+            #ink2 {
+                width: 20rem;
+                top: 30%;
+            }
+
+            #ink3 {
+                width: 20rem;
+                top: 0%;
+                left: -110%
+            }
+        }
+
+        .context {
+            margin: auto 6rem;
+            white-space: pre;
+            font-family: "SweetHeart", sans-serif;
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+
+        &::after {
+            content: '';
+            width: 5rem;
+            height: 3px;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes neroSwitchOn {
+    0% {
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(rgba(255, 242, 242, 0.95) 0px 0px 3.93953px) drop-shadow(rgba(255, 255, 255, 0.75) 0px 0px 19.6976px) drop-shadow(rgba(255, 255, 255, 0.44) 0px 0px 59.0929px);
+    }
+    50% {
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(rgba(255, 242, 242, 0.95) 0px 0px 3.93953px) drop-shadow(rgba(255, 255, 255, 0.75) 0px 0px 19.6976px) drop-shadow(rgba(255, 255, 255, 0.44) 0px 0px 59.0929px);
+    }
+    51% {
+        color: #4b473b;
+        filter: none;
+    }
+    75% {
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(rgba(255, 242, 242, 0.95) 0px 0px 3.93953px) drop-shadow(rgba(255, 255, 255, 0.75) 0px 0px 19.6976px) drop-shadow(rgba(255, 255, 255, 0.44) 0px 0px 59.0929px);
+    }
+    76% {
+        color: #4b473b;
+        filter: none;
+    }
+    85% {
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(rgba(255, 242, 242, 0.95) 0px 0px 3.93953px) drop-shadow(rgba(255, 255, 255, 0.75) 0px 0px 19.6976px) drop-shadow(rgba(255, 255, 255, 0.44) 0px 0px 59.0929px);
+    }
+    86% {
+        color: #4b473b;
+        filter: none;
+    }
+    100% {
+        color: rgb(255, 255, 255);
+        filter: drop-shadow(rgba(255, 242, 242, 0.95) 0px 0px 3.93953px) drop-shadow(rgba(255, 255, 255, 0.75) 0px 0px 19.6976px) drop-shadow(rgba(255, 255, 255, 0.44) 0px 0px 59.0929px);
+    }
+}

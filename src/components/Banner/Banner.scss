@@ -1,0 +1,171 @@
+.banner-container {
+    width:  100%;
+
+    .banner {
+        position: relative;
+        width: 100%;
+        min-height: 100%;
+        overflow-x: clip;
+        overflow-y: visible;
+        display: flex;
+        
+        .text {
+            position: absolute;
+            transition: width 0.4s ease, top 0.4s ease, left 0.4s ease;
+        
+            &.tang {
+                width: 20rem;
+                top: 10%;
+                left: -5%;
+                animation: floating1 3s ease-in-out infinite;
+                z-index: 1;
+            }
+
+            &.ngo {
+                width: 30rem;
+                top: 60%;
+                right: -5%;
+                animation: floating2 3s ease-in-out infinite;
+                z-index: 1;
+            }
+
+            &.kong {
+                width: 10rem;
+                top: 0%;
+                right: 40%;
+                animation: floating3 3s ease-in-out infinite;
+                z-index: 1;
+            }
+
+            &.stop {
+                animation-play-state: paused;
+            }
+        }
+
+        .text-wrap {
+            margin: auto;
+            .text-scroll {
+                max-width: 100%;
+                overflow: hidden;
+                .marquee {
+                    color: var(--text-primary-color);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    display: inline-block;
+                    animation: marquee 20s linear infinite;
+                    font-size: 2rem;
+                    font-weight: 700;
+
+                    &.reverse {
+                        animation-direction: reverse;
+                    }
+                  }
+                  
+                  .marquee p {
+                    display: inline-block;
+                    margin: 0.5rem 0;
+                    white-space: pre;
+                    cursor: default;
+                    user-select: none;
+                  }
+              }
+              
+              .text-banner {
+                padding: 2rem 0;
+                width: 100vw;
+                background-color: var(--text-primary-color);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+    
+                .title {
+                    font-family: "Mochiy Pop P One", sans-serif;
+                    font-size: 5rem;
+                    text-align: center;
+                    cursor: default;
+                    user-select: none;
+                    color: var(--bg-primary-color);
+                    
+                    span {
+                        font-family: "Montserrat";
+                        font-weight: 800;
+                    }
+                }
+            }
+        }
+
+        .text-container {
+            margin: auto;
+            .title {
+                font-family: "Mochiy Pop P One", sans-serif;
+                font-size: 9rem;
+                text-align: center;
+                color: transparent;
+                background: rgba(255, 0, 89, 1);
+                background: linear-gradient(45deg, #ff66c4 0%, #5271ff 33%, #ff66c4 66%, #5271ff 100%);
+                background-size: 400% 400%;
+                animation: errorBg 20s linear infinite;             
+                background-clip: text;
+            }
+        }
+
+        .circle {
+            margin: auto;
+            width: 30rem;
+            height: 30rem;
+            border-radius: 50%;
+            background: rgba(255, 0, 89, 1);
+            background: linear-gradient(45deg, #ff66c4 0%, #5271ff 33%, #ff66c4 66%, #5271ff 100%);
+            background-size: 400% 400%;
+            animation: errorBg 20s linear infinite;             
+        }
+    }
+}
+
+@keyframes floating1 {
+	0%, 100% {
+		transform: translateY(-1rem) rotate(30deg) translateZ(0px);
+	}
+	
+	44% {
+		transform: translateY(1rem) rotate(30deg) translateZ(0px);
+	}
+}
+
+@keyframes floating2 {
+	0%, 100% {
+		transform: translateY(-1rem) rotate(-30deg) translateZ(0px);
+	}
+	
+	44% {
+		transform: translateY(1rem) rotate(-30deg) translateZ(0px);
+	}
+}
+
+@keyframes floating3 {
+	0%, 100% {
+		transform: translateY(-1rem) rotate(90deg) translateZ(0px);
+	}
+	
+	44% {
+		transform: translateY(1rem) rotate(80deg) translateZ(0px);
+	}
+}
+
+@keyframes errorBg {
+    0% {
+        background-position: 100% 0%
+    }
+    100% {
+        background-position: 15% 100%
+    }
+}
+
+@keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+}
