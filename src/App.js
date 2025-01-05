@@ -7,7 +7,7 @@ import { GlobalProvider } from './globalContext';
 function App() {
   return (
     <GlobalProvider>
-      <Router basename="/official-web">
+      <Router>
         <Navbar />
         <Routes>
           <Route element={<Home />} path="/" />
