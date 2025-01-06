@@ -16,7 +16,7 @@ const FlipCard = ({ frontContent, backContent }) => {
   const getFrontCardStyle = () => {
     if (isFlipped) return {};
     return {
-      boxShadow: `${-rotation.y/2}px ${rotation.x/2}px 1.25rem rgba(0, 0, 0, 0.2)`,
+      // boxShadow: `${-rotation.y/2}px ${rotation.x/2}px 1.25rem rgba(0, 0, 0, 0.2)`,
     };
   };
 
