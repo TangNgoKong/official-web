@@ -124,6 +124,140 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .our-benifit-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-direction: column;
+    
+        .title {
+            display: flex;
+            margin: 0 auto;
+        }
+    
+        .scroller {
+            margin: auto 1rem;
+            img {
+                width: 4rem;
+            }
+        }
+    
+        h2 {
+            font-size: 2rem;
+            color: var(--bg-primary-color);
+            background: var(--text-primary-color);
+            padding: 1rem;
+            line-height: 1;
+            position: relative;
+            letter-spacing: 0rem;
+    
+            &::before {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                border-top: 0.5rem dashed var(--text-primary-color);
+                height: 0.5rem;
+                width: 100%;
+                top: -0.5rem;
+                left: 0;
+            }
+    
+            &::after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                border-top: 0.5rem dashed var(--text-primary-color);
+                height: 0.5rem;
+                width: 100%;
+                bottom: -1rem;
+                left: 0;
+            }
+        }
+    
+        .benefit-item {
+            display: flex;
+            margin: auto;
+            position: relative;
+            cursor: default;
+            user-select: none;
+            flex-direction: column;
+    
+            &.reverse {
+                flex-direction: column;
+
+            }
+            .item-number {
+                position: relative;
+                .number {
+                    font-family: "Abril Fatface", serif;
+                    color: #4b473b;
+                    font-size: 5rem;
+                    font-style: italic;
+                    text-align: center;
+    
+                    &.neon {
+                        animation: neroSwitchOn 2.5s linear forwards;
+                    }
+                }
+    
+                img {
+                    position: absolute;
+                }
+    
+                .ink {
+                    z-index: -1;
+                }
+    
+                #ink1 {
+                    width: 8rem;
+                    left: 25%;
+                    top: 10%;
+                }
+    
+                #ink2 {
+                    width: 10rem;
+                    left: 35%;
+                    top: 30%;
+                }
+    
+                #ink3 {
+                    width: 10rem;
+                    top: 0%;
+                    left: -10%;
+                }
+            }
+    
+            .context {
+                margin: auto 0;
+                white-space: pre;
+                font-family: "SweetHeart", sans-serif;
+                font-weight: 400;
+                font-size: 1.5rem;
+                padding-bottom: 3rem; 
+                text-align: center;
+            }
+    
+            &::after {
+                content: '';
+                width: 5rem;
+                height: 3px;
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+    
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @keyframes neroSwitchOn {
     0% {
         color: rgb(255, 255, 255);

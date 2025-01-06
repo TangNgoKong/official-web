@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import './Banner.scss';
 import { useGlobalContext } from '../../globalContext';
 import actionType from '../../actionType';
+import useIsMobile from '../../hooks/useIsMobile' ;
 
 // image
 import Tang from '../../assets/images/common/tang.svg';
@@ -10,12 +11,49 @@ import Kong from '../../assets/images/common/kong.svg';
 
 const Banner = () => {
     const { state, dispatch } = useGlobalContext();
+    const isMobile = useIsMobile();
 
     const bannerContainerRef = useRef(null);
     const prevScrollY = useRef(0);
     const [goingUp, setGoingUp] = useState(false);
     const [downPercentage, setDownPercentage] = useState(0);
     const [isScroll, setIsScroll] = useState(false);
+
+    const text = !isMobile ? 
+    {
+        tang: {
+            width: 20,
+            top: 10,
+            left: -5,
+        },
+        ngo: {
+            width: 30,
+            top: 60,
+            right: -5,
+        },
+        kong: {
+            width: 10,
+            top: 0,
+            right: 40,
+        }
+    } :
+    {
+        tang: {
+            width: 10,
+            top: 6,
+            left: -15,
+        },
+        ngo: {
+            width: 15,
+            top: 73,
+            right: -5,
+        },
+        kong: {
+            width: 5,
+            top: 0,
+            right: 20,
+        }
+    }
 
     useEffect(() => {
         let timeout;
@@ -54,27 +92,27 @@ const Banner = () => {
     let scrollText = `TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / TANG NGO KONG / `;
 
     return (
-        <div className='banner-container' ref={bannerContainerRef} style={{height: window.innerHeight}}>
+        <div className='banner-container' ref={bannerContainerRef} style={{height: isMobile ? '100vh' : window.innerHeight}}>
             <div className='banner'>
                 <img className={`text tang ${isScroll ? 'stop' : ''}`} src={Tang} alt='tang'
                     style={{
-                        width: `${(20 + 2) * (1-downPercentage)}rem`,
-                        top: `${10 + ((100 - 10) * (downPercentage))}%`,
-                        left: `${-5 + ((50 - (-5)) * (downPercentage))}%`,
+                        width: `${(text.tang.width + 2) * (1-downPercentage)}rem`,
+                        top: `${text.tang.top + ((100 - text.tang.top) * (downPercentage))}%`,
+                        left: `${text.tang.left + ((50 - text.tang.left) * (downPercentage))}%`,
                     }}
                 />
                 <img className={`text ngo ${isScroll ? 'stop' : ''}`} src={Ngo} alt='ngo'
                     style={{
-                        width: `${(30 + 2) * (1-downPercentage)}rem`,
-                        top: `${60 + (100 - 60) * (downPercentage)}%`,
-                        right: `${-5 + ((50 - (-5)) * (downPercentage))}%`,
+                        width: `${(text.ngo.width + 2) * (1-downPercentage)}rem`,
+                        top: `${text.ngo.top + (100 - text.ngo.top) * (downPercentage)}%`,
+                        right: `${text.ngo.right + ((50 - text.ngo.right) * (downPercentage))}%`,
                     }}
                 />
                 <img className={`text kong ${isScroll ? 'stop' : ''}`} src={Kong} alt='kong' 
                     style={{
-                        width: `${(10 + 2) * (1-downPercentage)}rem`,
-                        top: `${0 + (100 + 0) * (downPercentage)}%`,
-                        right: `${40 + ((50 - 40) * (downPercentage))}%`,
+                        width: `${(text.kong.width + 2) * (1-downPercentage)}rem`,
+                        top: `${text.kong.top + (100 + text.kong.top ) * (downPercentage)}%`,
+                        right: `${text.kong.right + ((50 - text.kong.right) * (downPercentage))}%`,
                     }}
                 />
                 <div className='text-wrap'>
